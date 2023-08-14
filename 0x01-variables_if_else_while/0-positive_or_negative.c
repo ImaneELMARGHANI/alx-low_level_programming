@@ -1,21 +1,26 @@
-/*
- * File: 101-quote.c
- * Auth: Brennan D Baraban
- */
-
-#include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
 /**
- * main - Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
- *                followed by a new line, to standard error.
+ * main - Prints a random number and states whether
+ *        it is positive, negative, or zero.
  *
- * Return: Always 1.
- */
+ * Return: Always 0.
+*/
 int main(void)
 {
-	write(2,
-	      "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
-	      59);
+	int n;
 
-	return (1);
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n < 0)
+		printf("%d is negative\n", n);
+	else
+		printf("%d is zero\n", n);
+
+	return (0);
 }
