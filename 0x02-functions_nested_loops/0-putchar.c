@@ -1,23 +1,19 @@
+#include "main.h"
+#include <stdio.h>
 
-#include "holberton.h" 
-  
- /** 
-  * main - Prints "Holberton" followed by a new line. 
-  * 
-  * Return: Always 0. 
-  */ 
- int main(void) 
- { 
-         _putchar('H'); 
-         _putchar('o'); 
-         _putchar('l'); 
-         _putchar('b'); 
-         _putchar('e'); 
-         _putchar('r'); 
-         _putchar('t'); 
-         _putchar('o'); 
-         _putchar('n'); 
-         _putchar('\n'); 
-  
-         return (0); 
- }
+/**
+ * print_alphabet - function
+ * Description: takes nothing as arguments, prints the alphabet in lowercase
+ */
+
+void print_alphabet(void)
+{
+	int i = 97;
+
+	while (i < 123)
+	{
+		_putchar(i);
+		i++;
+	}
+	_putchar('\n');
+}
