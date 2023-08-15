@@ -6,8 +6,6 @@
 #include <stdio.h>
 int main(void)
 {
-    // Your code here
-
 /**
  * main - Prints all possible combinations of two different digits,
  *        in ascending order, separated by a comma followed by a space.
