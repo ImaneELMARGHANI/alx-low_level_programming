@@ -2,6 +2,7 @@
 
 /**
  * print_sign - function
+ * @x: The integer to compute the absolute value of.
  * Description: prints + if x is positive, - if negative
  * and 0 if it's zero
  * Return: 1 if x is positive, -1 if negative and zero otherwise

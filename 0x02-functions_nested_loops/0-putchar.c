@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -68,3 +69,19 @@ int main(void)
 			return (0);
 }
 >>>>>>> 350c4903d0bd5f0e8a4eda252b05467757aaf0a3
+=======
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+/**
+ *  * main - Entry point
+ *   * Description: prints "_putchar" to stdrout
+ *    * Return: Always (0)
+ *     */
+
+int main(void)
+{
+		write(1, "_putchar\n", 9);
+			return (0);
+}
+>>>>>>> e76a4bdec8d4bb9fc70172d672e073f574b01275
