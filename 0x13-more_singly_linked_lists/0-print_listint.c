@@ -1,24 +1,33 @@
 #include "lists.h"
-
 /**
- * print_listint - prints all the elements of the linked list
- * @h: a node (memeber of the linked list)
- * Return: Number of element in the linked list
+ * find_listint_loop - finds the loop in a linked list
+ * @head: pointer to first node in the list
+ * Return:  The address of the node where the loop starts, or NULL
  */
-
-size_t print_listint(const listint_t *h)
+listint_t *find_listint_loop(listint_t *head)
 {
 
-	int i = 0;
+	listint_t *tmp, *start;
+	size_t i, count;
 
-	if (h != NULL)
+	count = 0;
+	tmp = head;
+	while (tmp)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		i++;
+		count++;
+		tmp = tmp->next;
+		start = head;
+		i = 0;
+		while (i < count)
+		{
+			if (start != tmp)
+			{
+				start = start->next;
+				i++;
+			}
+			else
+				return (start);
+		}
 	}
-
-	return (i);
-
-
+	return (NULL);
 }
