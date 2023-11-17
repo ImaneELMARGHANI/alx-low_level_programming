@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -9,6 +8,6 @@
  */
 int main(void)
 {
-	printf("%d\n", _strlen("My Dyn Lib"));
-	return (EXIT_SUCCESS);
+    printf("%d\n", _strlen("My Dyn Lib"));
+    return (0);
 }

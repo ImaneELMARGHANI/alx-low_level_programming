@@ -1,17 +1,22 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _puts - prints a string to stdout
- * @str: pointer to the string to print
+ * _puts - funtion prints string
+ * Description: This funtion that
+ * print a string for you
+ * @str: the arrg that's giving by
+ * the user
+ * Return: void
+ *
  */
+
 void _puts(char *str)
 {
-	int i;
-
-	for (i = 0; str[i] != '\0'; i++)
+	while (*str != '\0')
 	{
-		_putchar(str[i]);
+		putchar(*str);
+		str++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }

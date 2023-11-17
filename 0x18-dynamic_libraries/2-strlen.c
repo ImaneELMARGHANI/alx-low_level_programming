@@ -1,18 +1,23 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
+ * _strlen - funtion return size
+ * Description: This funtion that
+ * return to you the size of you string
+ * @s: The arrg that giving by the user
+ * Return: size of the string
  *
- * Return: the length of the string
  */
+
 int _strlen(char *s)
 {
-	int len = 0;
+	int counter = 0;
 
-	while (*s++)
-		len++;
+	while (*s != '\0')
+	{
+		counter++;
+		s++;
+	}
 
-	return (len);
+	return (counter);
 }

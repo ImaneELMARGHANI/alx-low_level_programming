@@ -1,35 +1,34 @@
 #include "main.h"
+
 /**
-* _strspn - return length of string that matches values consistently
-* @s: string to search
-* @accept: target matches
-* Return: number of bytes consecutively matched
-*/
+ * _strspn - calculates the length of initial
+ * segment with matching characters
+ * @s: Pointer to the string to be checked
+ * @accept: Pointer to the string with matching characters
+ *
+ * Description: Calculates the length of the
+ * initial segment of string s that consists
+ * of only characters from the accept string.
+ *
+ * Return: Length of the initial segment with matching characters
+ */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0, j;
-	int matches = 0;
+	unsigned int c = 0;
+	char *t = accept;
 
-	while (s[i] != '\0') /*iterate through string*/
+	while (*s++)
 	{
-
-		for (j = 0; accept[j] != '\0'; j++) /*iterate through target*/
-		{
-			if (s[i] == accept[j]) /*record & break at first match*/
+		while (*accept++)
+			if (*(s - 1) == *(accept - 1))
 			{
-				matches++;
+				c++;
 				break;
 			}
-
-			if (accept[j + 1] == '\0' && s[i] != accept[j])
-
-			return (matches);/*return if idx doesn't match*/
-		}
-
-		i++;
+		if (!(*--accept))
+			break;
+		accept = t;
 	}
-
-	return (matches); /* return num if all match till end */
-
+	return (c);
 }

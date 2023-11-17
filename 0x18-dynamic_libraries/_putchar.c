@@ -1,13 +1,15 @@
+/**
+ * _putchar - my own _putchar function
+ * Description: This function printed single
+ * character that passed by @c
+ * @c: The character that you need to pass
+ * Return: Always 0 means no error
+ */
+
 #include <unistd.h>
 
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
+char _putchar(char c)
 {
-	return (write(1, &c, 1));
+        write(1, &c, 1);
+        return (0);
 }
